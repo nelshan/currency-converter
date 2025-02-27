@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="content">
+    <h1>Currency Converter</h1>
+    <h4>The only currency converter you will ever need*</h4>
+    <form action="javascript:;" onsubmit="convert(event)">
+      <fieldset>
+        <label for="valueField">Amount</label>
+        <input type="number" placeholder="0" id="valueField" required>
+        
+        <label for="fromCurrency">From Currency</label>
+        <select id="fromCurrency"></select>
+
+        <label for="toCurrency">To Currency</label>
+        <select id="toCurrency"></select>
+
+        <input id="convert-button" class="button-primary" type="submit" value="Convert">
+      </fieldset>
+      <div id="loading-container" style="display: none;">
+        <div class="loader"></div>
+        <div>&nbsp;&nbsp;Calculating ...</div>
+      </div>
+      <div id="result"></div>
+    </form>
+  </div>
+
+  <p>* Uses live exchange rates for real-time currency conversion</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
